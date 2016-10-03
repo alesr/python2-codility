@@ -1,14 +1,10 @@
-def int_to_binary(n):
-  return "{0:b}".format(n)
+int_to_binary = lambda n: "{0:b}".format(n)
 
-def contain_zero(b):
-  return "0" in b
+contain_zero = lambda b: "0" in b
 
-def last_char_is_zero(b):
-  return b.endswith("0")
+last_char_is_zero = lambda b: b.endswith("0")
 
-def remove_trailing_zero(b):
-  return b[:len(b)-1]
+remove_trailing_zero = lambda b: b[:len(b)-1]
 
 def count_consecutive_zeros(b):
 
@@ -39,5 +35,3 @@ def solution(n):
     binary = remove_trailing_zero(binary)
   
   return count_consecutive_zeros(binary)
-
-print solution(2)
