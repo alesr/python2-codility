@@ -10,7 +10,9 @@ RUN \
     python-distribute \
     python-pip
 
-RUN pip install pytest
+RUN pip install \
+    pytest \
+    pytest-cov
 
 COPY . usr/src/python-exercises/
 
