@@ -14,15 +14,3 @@ before_install:
 
 script:
   - py.test --verbose practice/
-
-after_success:
-
-  # When pushing to branch master push container to alesr/gocodility 
-  - if [ "$TRAVIS_BRANCH" == "master" ]; then
-
-      docker login -u="$DOCKER_HUB_USERNAME" -p="$DOCKER_HUB_PASSWORD";
-
-      docker build -t alesr/python-exercises:latest .;
-
-      docker push alesr/python-exercises:latest;
-    fi
