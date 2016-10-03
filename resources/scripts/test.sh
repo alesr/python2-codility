@@ -2,6 +2,6 @@
 set -e
 set -u
 
-pytest practice/
+pytest --verbose practice/
 
 exit 0;
