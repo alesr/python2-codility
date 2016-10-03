@@ -8,30 +8,30 @@ remove_trailing_zero = lambda b: b[:len(b)-1]
 
 def count_consecutive_zeros(b):
 
-  counter, total = 0, 0
+    counter, total = 0, 0
 
-  for char in b:
+    for char in b:
 
-    if char == "0":
-      counter = counter + 1
+        if char == "0":
+            counter = counter + 1
 
-      if counter > total: 
-        total = counter
+            if counter > total: 
+                total = counter
 
-    else:
-      counter = 0
+        else:
+            counter = 0
 
-  return total
+    return total
 
 def solution(n):
   
-  if n == 0: return 0
+    if n == 0: return 0
 
-  binary = int_to_binary(n)
+    binary = int_to_binary(n)
 
-  if not contain_zero(binary): return 0
+    if not contain_zero(binary): return 0
 
-  while last_char_is_zero(binary):
-    binary = remove_trailing_zero(binary)
+    while last_char_is_zero(binary):
+        binary = remove_trailing_zero(binary)
   
-  return count_consecutive_zeros(binary)
+    return count_consecutive_zeros(binary)
