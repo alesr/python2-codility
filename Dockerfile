@@ -15,4 +15,3 @@ RUN pip install pytest
 COPY . usr/src/python-exercises/
 
 WORKDIR usr/src/python-exercises
-
