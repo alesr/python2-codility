@@ -23,12 +23,12 @@ def test_last_char_is_zero():
     assert binary_gap.last_char_is_zero("1101") == False
 
 
-def test_remove_trailing_zero():
-    assert binary_gap.remove_trailing_zero("10") == "1"
-    assert binary_gap.remove_trailing_zero("100") == "10"
-    assert binary_gap.remove_trailing_zero("010") == "01"
-    assert binary_gap.remove_trailing_zero("0") == ""
-    assert binary_gap.remove_trailing_zero("1001000") == "100100"
+def test_remove_last_char():
+    assert binary_gap.remove_last_char("10") == "1"
+    assert binary_gap.remove_last_char("100") == "10"
+    assert binary_gap.remove_last_char("010") == "01"
+    assert binary_gap.remove_last_char("0") == ""
+    assert binary_gap.remove_last_char("1001000") == "100100"
 
 
 def test_count_consecutive_zeros():

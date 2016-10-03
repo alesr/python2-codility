@@ -4,7 +4,7 @@ contain_zero = lambda b: "0" in b
 
 last_char_is_zero = lambda b: b.endswith("0")
 
-remove_trailing_zero = lambda b: b[:len(b)-1]
+remove_last_char = lambda b: b[:len(b)-1]
 
 def count_consecutive_zeros(b):
 
@@ -32,6 +32,6 @@ def solution(n):
     if not contain_zero(binary): return 0
 
     while last_char_is_zero(binary):
-        binary = remove_trailing_zero(binary)
+        binary = remove_last_char(binary)
   
     return count_consecutive_zeros(binary)
