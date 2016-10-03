@@ -1,0 +1,28 @@
+language: python
+
+python: 
+  - "2.7"
+
+services:
+  - docker
+
+sudo: false
+
+
+before_install:
+    - pip install pytest pytest-cov
+
+script:
+  - py.test --verbose practice/
+
+after_success:
+
+  # When pushing to branch master push container to alesr/gocodility 
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+
+      docker build -t alesr/python-exercises:latest .;
+
+      docker login -u="$DOCKER_HUB_USERNAME" -p="$DOCKER_HUB_PASSWORD";
+
+      docker push alesr/python-exercises:latest;
+    fi
