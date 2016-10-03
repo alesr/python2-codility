@@ -2,6 +2,8 @@
 set -e
 set -u
 
-pytest --verbose practice/
+py.test --verbose practice/
+
+py.test --cov=practice practice/
 
 exit 0;
