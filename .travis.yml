@@ -14,3 +14,4 @@ before_install:
 
 script:
   - py.test --verbose practice/
+  - py.test --cov=practice practice/
