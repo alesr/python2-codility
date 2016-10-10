@@ -1,5 +1,7 @@
 int_to_binary = lambda n: "{0:b}".format(n)
 
+remove_leading_zeros = lambda b: b.lstrip("0")
+
 contain_zero = lambda b: "0" in b
 
 last_char_is_zero = lambda b: b.endswith("0")
@@ -27,7 +29,9 @@ def solution(n):
   
     if n == 0: return 0
 
-    binary = int_to_binary(n)
+    raw_binary = int_to_binary(n)
+
+    binary = remove_leading_zeros(raw_binary)
 
     if not contain_zero(binary): return 0
 
