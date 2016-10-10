@@ -8,6 +8,11 @@ def test_int_to_binary():
     assert binary_gap.int_to_binary(529) == "1000010001"
     assert binary_gap.int_to_binary(0) != "01"
 
+def test_remove_leading_zeros():
+    assert binary_gap.remove_leading_zeros("0") == ""
+    assert binary_gap.remove_leading_zeros("01") == "1"
+    assert binary_gap.remove_leading_zeros("02") == "2"
+
 def test_contain_zero():
     assert binary_gap.contain_zero("1") == False
     assert binary_gap.contain_zero("11") == False
