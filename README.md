@@ -11,6 +11,4 @@ Travis CI is enabled on this repository for all branches.
 
 ### How to Run:
 
-`docker run -ti --rm --name python-exercises alesr/python-exercises`
-
 `make test` to run unit tests
