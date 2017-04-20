@@ -9,6 +9,11 @@ Docker Hub: https://hub.docker.com/r/alesr/python-exercises/
 Travis CI is enabled on this repository for all branches.
 
 
+##### Branches:
+
+Development is made on `dev` branch. Once the feature is fully functional a pull request must be opened before merging to `master`.
+
+
 ### How to Run:
 
 `make test` to run unit tests
